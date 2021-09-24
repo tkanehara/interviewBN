@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
+  <link href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body id="Articles_index">
+
+<div class="wrap">
+
+  <div class="heroImage_block">
+    <img src="mv.jpg" alt="見出しタイトルが入ります" id="file-preview">
+    <div class="articleCopy_block">
+      <h3>オープンイノベーションという風土から生まれた越境型インターンという存在</h3>
+    </div>
+  </div>
+
+  <div class="upload_block">
+      <ul class="MVoptions">
+        <li><img src="article/a-1.jpg"></li>
+        <li><img src="article/a-2.jpg"></li>
+        <li><img src="article/b-1.jpg"></li>
+        <li><img src="article/b-2.jpg"></li>
+        <li><img src="article/c-1.jpg"></li>
+        <li><img src="article/c-2.jpg"></li>
+      </ul>
+<!--       <div class="changeText_block">
+        <p><span>H1変更</span><input type="text" class="changeH1"><a href="javascript:void(0);" class="changeH1_btn">変更</a></p>
+      </div> -->
+  </div>
+</div><!-- /wrap -->
+<script type="text/javascript">
+$(function() {
+    
+    // $('.changeH1_btn').on('click', function() {
+    //   let h1Text = $(this).prev('input').val();
+    //   $('.articleCopy_block h3').text(h1Text);
+    // });
+    $('.MVoptions li img').on('click', function() {
+      let imgPath = $(this).attr('src');
+      $('#file-preview').attr('src', imgPath);
+    });
+});
+
+</script>
+</body>
+</html>
